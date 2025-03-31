@@ -16,7 +16,7 @@ Feature: go rest challenge
     Given path '/public/v2/users'
     When header accept = 'application/json'
     And header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + '881e444956ad119008f2437f1718b0592cd4a36777bde802348ff96a9818d745'
+    And header Authorization = 'Bearer ' + 'token'
     And request body
     And method POST
     Then status 201
@@ -28,7 +28,7 @@ Feature: go rest challenge
     Given path '/public/v2/users/' + '7805567'
     When header accept = 'application/json'
     And header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + '881e444956ad119008f2437f1718b0592cd4a36777bde802348ff96a9818d745'
+    And header Authorization = 'Bearer ' + 'token'
     And method GET
     Then status 200
     * print response
@@ -39,7 +39,7 @@ Feature: go rest challenge
     Given path '/public/v2/users'
     When header accept = 'application/json'
     And header Content-Type = 'application/json'
-    And header Authorization = 'Bearer ' + '881e444956ad119008f2437f1718b0592cd4a36777bde802348ff96a9818d745'
+    And header Authorization = 'Bearer ' + 'token'
     And method GET
     Then status 200
     And assert response.length>0
